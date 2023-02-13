@@ -1,0 +1,21 @@
+<script type="text/javascript">
+	var array = []; // Это задание массива 
+	var size = parseInt(prompt("Size: "));
+	var index = 0;
+
+	while (index < size) {
+		array[index] = parseInt(prompt("Элемент "+ index));
+		index = index + 1;
+	}
+
+	index = 0;
+	var sum = 0;
+
+	while (index < size) {
+		sum = sum + array[index];
+		index = index + 1;
+	}
+
+	alert(array); // Это вывод на экран
+	allert(sum);
+</script>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="b.emelyanov"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-03 12:19:03 "/>
+        <attribute name="created" value="Yi5lbWVseWFub3Y7UFNJMjsyMDIzLTAyLTAzOyIxMTo1ODoxOSAiOzI1OTg="/>
+        <attribute name="edited" value="Yi5lbWVseWFub3Y7UFNJMjsyMDIzLTAyLTAzOyIxMjoxOTowMyAiOzE7MjY5Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#1053;&#1072;&#1081;&#1090;&#1080; &#1089;&#1082;&#1072;&#1083;&#1103;&#1088;&#1085;&#1086;&#1077; &#1087;&#1088;&#1086;&#1080;&#1079;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077; 2-&#1093; &#1074;&#1077;&#1082;&#1090;&#1086;&#1088;&#1086;&#1074;. &#1057;&#1085;&#1072;&#1095;&#1072;&#1083;&#1072; &#1073;&#1077;&#1088;&#1077;&#1084; &#1074;&#1077;&#1082;&#1090;&#1086;&#1088;&#1072; &#1088;&#1072;&#1079;&#1084;&#1077;&#1088;&#1085;&#1086;&#1089;&#1090;&#1080; 2 &#1080;&#1083;&#1080; 3, &#1079;&#1072;&#1090;&#1077;&#1084; &#1087;&#1088;&#1086;&#1080;&#1079;&#1074;&#1086;&#1083;&#1100;&#1085;&#1086;&#1081; (&#1085;&#1086; &#1086;&#1076;&#1080;&#1085;&#1072;&#1082;&#1086;&#1074;&#1086;&#1081;) &#1088;&#1072;&#1079;&#1084;&#1077;&#1088;&#1085;&#1086;&#1089;&#1090;&#1080;"/>
+            <declare name="size" type="Integer" array="False" size=""/>
+            <assign variable="size" expression="2"/>
+            <declare name="firstVector" type="Integer" array="True" size="size"/>
+            <declare name="secondVector" type="Integer" array="True" size="size"/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <assign variable="index" expression="0"/>
+            <declare name="Scalar" type="Integer" array="False" size=""/>
+            <assign variable="Scalar" expression="0"/>
+            <while expression="index &lt; size">
+                <assign variable="firstVector[index]" expression="1 + Random(10)"/>
+                <assign variable="secondVector[index]" expression="1 + Random(10)"/>
+                <assign variable="Scalar" expression="Scalar + (firstVector[index]*secondVector[index])"/>
+                <assign variable="index" expression="index + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

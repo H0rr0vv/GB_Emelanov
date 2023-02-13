@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="b.emelyanov"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-06 12:30:00 "/>
+        <attribute name="created" value="Yi5lbWVseWFub3Y7UFNJMjsyMDIzLTAyLTA2OyIxMjoyNTowMiAiOzI1ODg="/>
+        <attribute name="edited" value="Yi5lbWVseWFub3Y7UFNJMjsyMDIzLTAyLTA2OyIxMjozMDowMCAiOzE7MjY5MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#1042;&#1099;&#1103;&#1089;&#1085;&#1080;&#1090;&#1100; &#1103;&#1074;&#1083;&#1103;&#1077;&#1090;&#1089;&#1103; &#1083;&#1080; &#1095;&#1080;&#1089;&#1083;&#1086; &#1095;&#1105;&#1090;&#1085;&#1099;&#1084;"/>
+            <declare name="value" type="Integer" array="False" size=""/>
+            <output expression="&quot;&#1042;&#1074;&#1077;&#1076;&#1080;&#1090;&#1077; &#1095;&#1077;&#1089;&#1083;&#1086;&quot;" newline="True"/>
+            <input variable="value"/>
+            <if expression="value mod 2 == 0">
+                <then>
+                    <output expression="&quot;&#1063;&#1080;&#1089;&#1083;&#1086; &quot; &amp; value &amp; &quot; - &#1095;&#1077;&#1090;&#1085;&#1086;&#1077;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;&#1063;&#1080;&#1089;&#1083;&#1086; &quot; &amp; value &amp; &quot; - &#1085;&#1077;&#1095;&#1077;&#1090;&#1085;&#1086;&#1077;&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

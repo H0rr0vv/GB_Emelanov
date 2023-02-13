@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="b.emelyanov"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-06 02:10:47 "/>
+        <attribute name="created" value="Yi5lbWVseWFub3Y7UFNJMjsyMDIzLTAyLTA2OyIwMjowMzoxNiAiOzI1ODg="/>
+        <attribute name="edited" value="Yi5lbWVseWFub3Y7UFNJMjsyMDIzLTAyLTA2OyIwMjoxMDo0NyAiOzI7MjY5OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#1055;&#1086;&#1082;&#1072;&#1079;&#1072;&#1090;&#1100; &#1074;&#1090;&#1086;&#1088;&#1091;&#1102; &#1094;&#1080;&#1092;&#1088;&#1091; &#1090;&#1088;&#1105;&#1093;&#1079;&#1085;&#1072;&#1095;&#1085;&#1086;&#1075;&#1086; &#1095;&#1080;&#1089;&#1083;&#1072;"/>
+            <declare name="value" type="Integer" array="False" size=""/>
+            <assign variable="value" expression="100+random(899)"/>
+            <declare name="thirdFigure" type="Integer" array="False" size=""/>
+            <assign variable="thirdFigure" expression="value mod 100/10"/>
+            <output expression="thirdFigure" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
