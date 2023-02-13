@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="b.emelyanov"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-08 09:07:39 "/>
+        <attribute name="created" value="Yi5lbWVseWFub3Y7UFNJMjsyMDIzLTAyLTA4OyIwODozNzoyOSAiOzI2MDc="/>
+        <attribute name="edited" value="Yi5lbWVseWFub3Y7UFNJMjsyMDIzLTAyLTA4OyIwOTowNzozOSAiOzE7MjcxNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="size" type="Integer" array="False" size=""/>
+            <assign variable="size" expression="8"/>
+            <declare name="numbers" type="Integer" array="True" size="size"/>
+            <assign variable="numbers[0]" expression="1"/>
+            <assign variable="numbers[1]" expression="8"/>
+            <assign variable="numbers[2]" expression="3"/>
+            <assign variable="numbers[3]" expression="8"/>
+            <assign variable="numbers[4]" expression="2"/>
+            <assign variable="numbers[5]" expression="6"/>
+            <assign variable="numbers[6]" expression="8"/>
+            <assign variable="numbers[7]" expression="8"/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <assign variable="index" expression="0"/>
+            <declare name="maximum" type="Integer" array="False" size=""/>
+            <assign variable="maximum" expression="numbers[index]"/>
+            <declare name="countMaximal" type="Integer" array="False" size=""/>
+            <assign variable="countMaximal" expression="0"/>
+            <while expression="index&lt;size">
+                <if expression="numbers[index]&gt;maximum">
+                    <then>
+                        <assign variable="maximum" expression="numbers[index]"/>
+                        <assign variable="countMaximal" expression="1"/>
+                    </then>
+                    <else>
+                        <if expression="numbers[index] == maximum">
+                            <then>
+                                <assign variable="countMaximal" expression="countMaximal + 1"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <assign variable="index" expression="index+1"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="countMaximal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

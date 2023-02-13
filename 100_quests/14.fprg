@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="b.emelyanov"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-06 04:01:28 "/>
+        <attribute name="created" value="Yi5lbWVseWFub3Y7UFNJMjsyMDIzLTAyLTA2OyIwMzoxNToxNiAiOzI1OTI="/>
+        <attribute name="edited" value="Yi5lbWVseWFub3Y7UFNJMjsyMDIzLTAyLTA2OyIwNDowMToyOCAiOzE7MjY5OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#1053;&#1072;&#1081;&#1090;&#1080; &#1090;&#1088;&#1077;&#1090;&#1100;&#1102; &#1094;&#1080;&#1092;&#1088;&#1091; &#1095;&#1080;&#1089;&#1083;&#1072; &#1080;&#1083;&#1080; &#1089;&#1086;&#1086;&#1073;&#1097;&#1080;&#1090;&#1100;, &#1095;&#1090;&#1086; &#1077;&#1105; &#1085;&#1077;&#1090;"/>
+            <declare name="value" type="Integer" array="False" size=""/>
+            <assign variable="value" expression="1+random(500)"/>
+            <declare name="thirdFigure" type="Integer" array="False" size=""/>
+            <assign variable="thirdFigure" expression="value mod 1000 / 100"/>
+            <if expression="thirdFigure &gt; 0">
+                <then>
+                    <assign variable="thirdFigure" expression="value mod 1000 / 100"/>
+                    <output expression="&quot;&#1058;&#1088;&#1077;&#1090;&#1100;&#1103; &#1094;&#1080;&#1092;&#1088;&#1072; &#1095;&#1080;&#1089;&#1083;&#1072; = &quot; &amp; thirdFigure" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;&#1063;&#1080;&#1089;&#1083;&#1086; &#1085;&#1077; &#1080;&#1084;&#1077;&#1077;&#1090; &#1090;&#1088;&#1077;&#1090;&#1100;&#1102; &#1094;&#1080;&#1092;&#1088;&#1091;&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

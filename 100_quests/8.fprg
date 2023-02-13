@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="b.emelyanov"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-06 02:03:04 "/>
+        <attribute name="created" value="Yi5lbWVseWFub3Y7UFNJMjsyMDIzLTAyLTA2OyIwMTo1ODowNiAiOzI1OTY="/>
+        <attribute name="edited" value="Yi5lbWVseWFub3Y7UFNJMjsyMDIzLTAyLTA2OyIwMjowMzowNCAiOzE7MjY5Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#1055;&#1086;&#1082;&#1072;&#1079;&#1072;&#1090;&#1100; &#1095;&#1077;&#1090;&#1085;&#1099;&#1077; &#1095;&#1080;&#1089;&#1083;&#1072; &#1086;&#1090; 1 &#1076;&#1086; N"/>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <assign variable="N" expression="1+Random(10)"/>
+            <declare name="size" type="Integer" array="False" size=""/>
+            <assign variable="size" expression="N"/>
+            <assign variable="N" expression="1"/>
+            <while expression="N&lt;=size">
+                <if expression="N mod 2 ==0">
+                    <then>
+                        <output expression="N&amp; &quot; &quot;" newline="False"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="N" expression="N+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

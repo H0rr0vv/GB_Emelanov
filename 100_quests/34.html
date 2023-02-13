@@ -1,0 +1,24 @@
+<script>
+	alert("Написать программу замену элементов массива на противоположные"); 
+
+	var size = parseInt (12);
+	var array = [size]; 
+	index = parseInt (0);
+	var max = 10;
+	var min = -10;
+	var sum = 0;
+
+	while (index < size) {
+		array[index] = parseInt(Math.random () * (max - min + 1)) + min;
+		alert ("До = " + array[index]);
+		array[index] = -array[index];
+		alert ("После = " + array[index]);
+		index = index + 1;
+	}
+
+
+
+	document.writeln (array);
+
+	
+</script>

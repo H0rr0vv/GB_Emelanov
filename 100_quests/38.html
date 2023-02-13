@@ -1,0 +1,29 @@
+<script>
+	alert("Найти сумму чисел одномерного массива стоящих на нечетной позиции"); 
+
+	var size = parseInt (5);
+	var array = [size];
+	index = parseInt (0);
+	var max = 10;
+	var min = 1;
+	var sum = 0;
+
+
+	while (index < size) {
+		array[index] = parseInt((Math.random () * (max - min + 1)) + min);
+		index = index + 1;
+	}
+
+	index = 1;
+
+	while (index < size) {
+		sum = sum + array[index];
+		index = index + 2;
+	}
+
+
+	document.writeln ("Массив " + array);
+
+	document.writeln ("Сумма элементов массива стоящих на нечетных позициях равна " + sum);
+	
+</script>

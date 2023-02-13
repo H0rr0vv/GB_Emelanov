@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="b.emelyanov"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-06 02:21:49 "/>
+        <attribute name="created" value="Yi5lbWVseWFub3Y7UFNJMjsyMDIzLTAyLTA2OyIwMjoxMTowMSAiOzI1ODE="/>
+        <attribute name="edited" value="Yi5lbWVseWFub3Y7UFNJMjsyMDIzLTAyLTA2OyIwMjoyMTo0OSAiOzE7MjcwMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#1044;&#1072;&#1085;&#1086; &#1095;&#1080;&#1089;&#1083;&#1086; &#1080;&#1079; &#1086;&#1090;&#1088;&#1077;&#1079;&#1082;&#1072; [10, 99]. &#1055;&#1086;&#1082;&#1072;&#1079;&#1072;&#1090;&#1100; &#1085;&#1072;&#1080;&#1073;&#1086;&#1083;&#1100;&#1096;&#1091;&#1102; &#1094;&#1080;&#1092;&#1088;&#1091; &#1095;&#1080;&#1089;&#1083;&#1072;"/>
+            <declare name="value" type="Integer" array="False" size=""/>
+            <assign variable="value" expression="10 + random(89)"/>
+            <output expression="&quot;&#1044;&#1072;&#1085;&#1086; &#1095;&#1080;&#1089;&#1083;&#1086; &quot; &amp; value" newline="True"/>
+            <declare name="firstFigure" type="Integer" array="False" size=""/>
+            <declare name="secondFigure" type="Integer" array="False" size=""/>
+            <assign variable="firstFigure" expression="value / 10"/>
+            <assign variable="secondFigure" expression="value mod 10"/>
+            <output expression="&quot;&#1053;&#1072;&#1080;&#1073;&#1086;&#1083;&#1100;&#1096;&#1072;&#1103; &#1094;&#1080;&#1092;&#1088;&#1072; &#1082;&#1086;&#1090;&#1086;&#1088;&#1086;&#1075;&#1086; = &quot;" newline="False"/>
+            <if expression="secondFigure &gt; firstFigure">
+                <then>
+                    <output expression="secondFigure" newline="False"/>
+                </then>
+                <else>
+                    <output expression="firstFigure" newline="False"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

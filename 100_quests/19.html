@@ -1,0 +1,26 @@
+<script>
+	alert("Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0"); //xy-1; x-y-2; -x-y-3; -xy-4
+	var X = parseInt(prompt("Enter X"));
+	var Y = parseInt(prompt("Enter Y"));
+
+	if (X > 0 & Y > 0) {
+		alert("1 Quarter");
+	}
+	else {
+		
+		if (X > 0 & Y < 0) {
+			alert("2 Quarter");
+		}
+		else {
+			if (X < 0 & Y < 0) {
+				alert("3 Quarter");
+			}
+			else {
+				alert("4 Quarter")
+				}
+			}
+		}
+
+
+
+</script>

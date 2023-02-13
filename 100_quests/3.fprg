@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="b.emelyanov"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-06 04:24:08 "/>
+        <attribute name="created" value="Yi5lbWVseWFub3Y7UFNJMjsyMDIzLTAyLTAzOyIwMzo0MzoyOCAiOzI1OTM="/>
+        <attribute name="edited" value="Yi5lbWVseWFub3Y7UFNJMjsyMDIzLTAyLTA2OyIwNDoyNDowOCAiOzI7MjcwMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#1044;&#1072;&#1085;&#1086; &#1095;&#1080;&#1089;&#1083;&#1086; &#1086;&#1073;&#1086;&#1079;&#1085;&#1072;&#1095;&#1072;&#1102;&#1097;&#1077;&#1077; &#1076;&#1077;&#1085;&#1100; &#1085;&#1077;&#1076;&#1077;&#1083;&#1080;. &#1042;&#1099;&#1103;&#1089;&#1085;&#1080;&#1090;&#1100; &#1103;&#1074;&#1083;&#1103;&#1077;&#1090;&#1089;&#1103; &#1085;&#1086;&#1084;&#1077;&#1088; &#1076;&#1085;&#1103; &#1085;&#1077;&#1076;&#1077;&#1083;&#1080; &#1074;&#1099;&#1093;&#1086;&#1076;&#1085;&#1099;&#1084;"/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <output expression="&quot;&#1042;&#1074;&#1077;&#1076;&#1080;&#1090;&#1077; &#1085;&#1086;&#1084;&#1077;&#1088; &#1076;&#1085;&#1103; &#1085;&#1077;&#1076;&#1077;&#1083;&#1080;&quot;" newline="True"/>
+            <input variable="index"/>
+            <if expression="index &gt; 0">
+                <then>
+                    <if expression="index &lt;= 7">
+                        <then>
+                            <if expression="index &gt;5">
+                                <then>
+                                    <output expression="&quot;&#1042;&#1099;&#1093;&#1086;&#1076;&#1085;&#1086;&#1081;!&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;&#1041;&#1091;&#1076;&#1085;&#1080;&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;&#1042; &#1085;&#1077;&#1076;&#1077;&#1083;&#1080; &#1090;&#1086;&#1083;&#1100;&#1082;&#1086; 7 &#1076;&#1085;&#1077;&#1081;&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;&#1054;&#1090;&#1089;&#1095;&#1077;&#1090; &#1089; &#1077;&#1076;&#1080;&#1085;&#1080;&#1094;&#1099;&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
