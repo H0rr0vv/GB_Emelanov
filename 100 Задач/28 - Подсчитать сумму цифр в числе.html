@@ -1,0 +1,29 @@
+<script>
+	alert("Подсчитать сумму цифр в числе"); //код работает только для целых чисел
+	
+	var number = parseInt (prompt ("Enter number")); 
+	var sum = parseInt (0);
+	var last_number = parseInt (0);
+	
+	if (number > 0) {
+		while (number > 0) {
+			last_number = number % 10;
+			sum = sum + last_number;
+			number = parseInt(number / 10);
+		}
+	}
+	else {
+		while (number < 0) {
+			last_number = number % 10;
+			sum = sum + last_number;
+			number = parseInt(number / 10);
+		}
+		sum = sum * -1;
+
+	}
+
+	
+	alert(sum);
+
+	
+</script>

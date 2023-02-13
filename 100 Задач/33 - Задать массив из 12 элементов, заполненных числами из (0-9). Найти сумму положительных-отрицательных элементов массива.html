@@ -1,0 +1,22 @@
+<script>
+	alert("Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива"); 
+
+	var size = parseInt (12);
+	var array = [size]; 
+	index = parseInt (0);
+	var max = 9;
+	var min = 0;
+	var sum = 0;
+
+	while (index < size) {
+		array[index] = parseInt(Math.random () * (max - min + 1)) + min;
+		sum = sum + array[index];
+		index = index + 1;
+	}
+
+
+
+	document.writeln (sum);
+
+	
+</script>

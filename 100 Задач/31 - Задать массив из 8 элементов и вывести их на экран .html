@@ -1,0 +1,16 @@
+<script>
+	alert("Задать массив из 8 элементов и вывести их на экран"); 
+
+	var size = parseInt (8);
+	var array = [size]; 
+	index = parseInt (0);
+
+	while (index < size) {
+		array[index] = parseInt (prompt("Введите элемент массива"));
+		index = index + 1;
+	}
+	
+	document.writeln (array);
+
+	
+</script>

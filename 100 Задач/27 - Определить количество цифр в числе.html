@@ -1,0 +1,24 @@
+<script>
+	alert("Определить количество цифр в числе"); //код работает только для целых чисел
+	
+	var number = Number (prompt ("Enter number")); 
+	var count_number = parseInt (0);
+	
+	if (number >= 1) {
+		while (number >= 1) {
+			number = number / 10;
+			count_number = count_number + 1;
+		}
+	}
+
+	else {
+		while (number <= -1) {
+			number = number / 10;
+			count_number = count_number + 1;
+		}
+	}
+
+	alert(count_number);
+
+	
+</script>
