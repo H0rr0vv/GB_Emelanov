@@ -24,6 +24,8 @@ void PrintMod(int remain)
     }
 }
 
+
+
 int cratDigit = CratDigit(numberA, numberB);
 
 PrintMod(cratDigit);
