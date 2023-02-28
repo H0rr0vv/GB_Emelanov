@@ -1,0 +1,188 @@
+//Задача 2: 
+//Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
+//a = 5; b = 7 -> max = 7
+//a = 2 b = 10 -> max = 10
+//a = -9 b = -3 -> max = -3
+
+Console.WriteLine("Введите перове число");
+int valueA = Convert.ToInt32(Console.ReaLine());
+Console.WriteLine("Введите второе число");
+int valueB = Convert.ToInt32(Console.ReaLine());
+
+int Compare(int valA, int valB)
+{
+    if (valA > valB)
+    {
+        return valA;
+    }
+    else
+    {
+        return valB;
+    }
+}
+
+int compare = Compare(valueA, valueB);
+Console.WriteLine($"max = {Compare(valueA, valueB)}";
+
+
+/////////////////////////////////////////////////////////////////////
+
+
+//Задача 4: 
+//Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
+//2, 3, 7 -> 7
+//44 5 78 -> 78
+//22 3 9 -> 22
+
+Console.WriteLine("Введите перове число");
+int valueA = Convert.ToInt32(Console.ReaLine());
+Console.WriteLine("Введите второе число");
+int valueB = Convert.ToInt32(Console.ReaLine());
+Console.WriteLine("Введите третье число");
+int valueC = Convert.ToInt32(Console.ReaLine());
+
+int Compare(int valA, int valB, int valC)
+{
+    if (valA > valB)
+    {
+        if (valA > valC)
+        {
+            return valA;
+        }
+        else
+        {
+            return valC;
+        }
+    }
+    else
+    {
+        if (valB > valC)
+        {
+            return valB;
+        }
+        else
+        {
+            return valC;
+        }
+    }
+}
+
+int compare = Compare(valueA, valueB, valueC);
+Console.WriteLine($"max = {Compare(valueA, valueB, valueC)}";
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+//Задача 6: 
+//Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+
+//4 -> да
+//-3 -> нет
+//7 -> нет
+
+Console.WriteLine("Введите число");
+int value = Convert.ToInt32(Console.ReaLine());
+
+if (value % 2 == 0)
+{
+    Console.WriteLine("да");
+}
+else
+{
+    Console.WriteLine("нет");
+}
+
+
+///////////////////////////////////////////////////////////////
+
+
+//Задача 8: 
+//Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+//5 -> 2, 4
+//8 -> 2, 4, 6, 8
+
+Console.WriteLine("Введите число");
+int value = Convert.ToInt32(Console.ReaLine());
+int index = 1;
+
+while (index < value)
+{
+    Console.Write(value);
+    index = index + 2;
+}
+
+
+///////////////////////////////////////////////////////////////
+
+
+//Задача 10: 
+//Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+//456 -> 5
+//782 -> 8
+//918 -> 1
+
+Console.WriteLine("Введите трехзначное число");
+int value = Convert.ToInt32(Console.ReaLine());
+
+int SecontDigit(int val)
+{
+    int result = val / 10 % 10;
+    return result;
+}
+
+Console.WriteLine(result);
+
+
+//////////////////////////////////////////////////////////////
+
+
+//Задача 13: 
+//Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+//645 -> 5
+//78 -> третьей цифры нет
+//32679 -> 6
+
+Console.WriteLine("Введите число");
+int value = Convert.ToInt32(Console.ReaLine());
+
+int ThirdDigit(int val)
+{
+    if (val / 1000 == 0)
+    {
+        while (val / 1000 != 0)
+        {
+            val = val / 10;
+        }
+        return val % 10;
+    }
+    else 
+    {
+        Console.WriteLine("третьей цифры нет"); 
+    }
+   
+}
+
+int thirdDigit = ThirdDigit(value);
+Console.WriteLine(thirdDigit);
+
+
+/////////////////////////////////////////////////////////////////
+
+
+//Задача 15: 
+//Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+//6 -> да
+//7 -> да
+//1 -> нет
+
+Console.WriteLine("Введите номер дня недели");
+int numberOfWeek = Convert.ToInt32(Console.ReaLine());
+
+bool WeekEnd(numOfWeek)
+{
+    return numOfWeek == 6 || numOfWeek == 7 ? "да": "нет";
+}
+
+
+Console.WriteLine(weekEnd);
