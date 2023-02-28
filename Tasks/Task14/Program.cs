@@ -8,8 +8,8 @@
 Console.WriteLine("Введите число");
 int number = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine (Multiple(number) ? "да" : "нет");
- 
+Console.WriteLine(Multiple(number) ? "да" : "нет");
+
 
 bool Multiple(int num)
 {

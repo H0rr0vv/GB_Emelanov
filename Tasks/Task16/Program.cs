@@ -11,10 +11,10 @@ int numberA = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе число");
 int numberB = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine(Sqrt(numberA, numberB) || Sqrt(numberB, numberA) ? "да" : "нет");
+Console.WriteLine(SquareNumbers(numberA, numberB) ? "да" : "нет");
 
 
-bool Sqrt(int numA, int numB)
+bool SquareNumbers(int numA, int numB)
 {
-    return numA * numA == numB;
+    return numA * numA == numB || numB * numB == numA;
 }
