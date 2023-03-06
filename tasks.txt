@@ -210,3 +210,17 @@ double Distanse (int AX, int AY, int AZ, int BX, int BY, int BZ)
 //3 -> 1, 8, 27
 //5 -> 1, 8, 27, 64, 125
 
+Console.WriteLine("Введите число");
+int number = Convert.ToInt32(Console.ReadLine());
+int index = 1;
+
+void CubeTable(int ind, int num)
+{
+    while (index <= number)
+    {
+        Console.Write($"{index * index * index}, ");
+        index++;
+    }
+}
+
+CubeTable(index, number);
