@@ -17,8 +17,6 @@ int coordinataX = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите Y: ");
 int coordinataY = Convert.ToInt32(Console.ReadLine());
 
-int NumberOfQuarter(int x, int y);
-
 int quarter = NumberOfQuarter(coordinataX, coordinataY);
 
 string result = quarter > 0 
@@ -26,6 +24,8 @@ string result = quarter > 0
                 : "ВВедены некорректные координаты";
 
 Console.Writeline(result);
+
+int NumberOfQuarter(int x, int y)
 {
     if (x > 0 && y > 0) return 1;
     if (x > 0 && y < 0) return 2;
@@ -54,7 +54,7 @@ int range = Range(quarter);
 
 Console.Writeline(range);
 
-string Range(int quart);
+string Range(int quart)
 {
     if (quart == 1) return "x > 0, y > 0";
     if (quart == 2) return "x > 0, y < 0";
@@ -67,9 +67,58 @@ string Range(int quart);
 ///////////////////////////////////////////////////////////////
 
 
+double res = Math.Sqrt();
+double resRound = Math.Round(res, 2, MidpointRounding.ToZero);
+
+
+////////////////////////////////////////////////////////////////
+
+
 //Задача 20:
 //Напишите программу, которая принимает на вход координаты двух точек
 //и находит расстояние между ними в 2D пространстве
 
-double res = Math.Sqrt();
-double resRound = Math.Round(res, 2);
+Console.WriteLine("Введите коордитаты первой точки");
+Console.WriteLine("Х: ");
+int APointX = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Y: ");
+int APointY = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите коордитаты второй точки");
+Console.WriteLine("Х: ");
+int BPointX = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Y: ");
+int BPointY = Convert.ToInt32(Console.ReadLine());
+
+double distance = MathRound(Distanse(APointX, APointY, BPointX, BPointY), 2, MidpointRounding.ToZero);
+Console.WriteLine(distance);
+
+double Distanse (int AX, int AY, int BX, int BY)
+{
+    int rangeX = AX - BX;
+    int rangeY = AY - BY;
+    double result = Math.Sqrt((rangeX * rangeX) + (rangeY * rangeY));
+    return result;
+}
+
+
+//////////////////////////////////////////////////////////////
+
+
+//Задача 22:
+//Напишите программу, которая принимает на вход число (N)
+//и выдает таблицу квадратов чисел от 1 до N
+
+//5 -> 1, 4, 9, 16, 25
+//2 -> 1, 4
+
+Console.WriteLine("Введите число");
+int value = Convert.ToInt32(Console.ReadLine());
+int index = 1;
+
+void ()
+while (index <= value)
+{
+    Console.Write($"{index}, ");
+    index = index + 2;
+}
