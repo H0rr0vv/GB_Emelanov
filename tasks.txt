@@ -113,12 +113,60 @@ double Distanse (int AX, int AY, int BX, int BY)
 //2 -> 1, 4
 
 Console.WriteLine("Введите число");
-int value = Convert.ToInt32(Console.ReadLine());
+int number = Convert.ToInt32(Console.ReadLine());
 int index = 1;
 
-void ()
-while (index <= value)
+void SqrTable(int ind, int num)
 {
-    Console.Write($"{index}, ");
-    index = index + 2;
+    while (index <= number)
+    {
+        Console.Write($"{index * index}, ");
+        index++;
+    }
 }
+
+SqrTable(index, number);
+
+
+////////////////////////////////////////////////////////////////
+
+
+//Задача 19:
+//Напишите программу, которая принимает на вход пятизначное число 
+//и прорверяет, является ли оно палиндромом
+//14212 -> нет
+//12821 -> да
+//23432 -> да
+
+Console.WriteLine("Введите пятизначное число");
+int number = Convert.ToInt32(Console.ReadLine());
+
+if (number / 100000 > 0 && number / 100000 < 1)
+{
+    Console.WriteLine(PalindromTest(number) ? "да" : "нет");
+}
+else
+{
+    Console.WriteLine("Вы ввели НЕ пятизначное число!");
+}
+
+bool PalindromTest (int num)
+{
+    int firstElement = num / 10000;
+    int secondElement = num / 1000 % 10;
+    int fourElement = num / 10 % 10;
+    int fiveElement = num % 10;
+    return firstElement == fiveElement && secondElement == fourElement;
+}
+
+
+//////////////////////////////////////////////////////////////////
+
+
+//Задача 21
+//Напишите программу, которая принимает на вход координаты 
+//двух точек и находит расстояние между ними в 3D пространстве.
+
+//A (3,6,8); B (2,1,-7), -> 15.84
+//A (7,-5, 0); B (1,-1,9) -> 11.53
+
