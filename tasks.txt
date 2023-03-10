@@ -116,10 +116,25 @@ Console.WriteLine(productToNumber);
 
 int[] array = new int[8];
 
-void ArrZeroOne(arr[])
+void FeelArrZeroOne(int[] arr)
 {
     for (int i = 0; i < arr.Lenght; i++)
     {
-        
-    }
+        arr[i] = Random.Next(0, 2);
+    }    
 }
+
+void PrintArray(int[] arr)
+{
+    Console.Write("[");
+
+    for (int i = 0; i < arr.Lenght; i++)
+    {
+        Console.Write(arr[i]);
+        if (i < arr.Lenght) Console.Write(", ");
+    }
+    
+    Console.Write("]");
+}
+
+PrintArray(array);

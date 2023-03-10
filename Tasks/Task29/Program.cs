@@ -2,19 +2,19 @@
 //которая задаёт массив из 8 элементов и выводит их на экран.
 //1, 2, 5, 7, 19, 6, 1, 33 -> [1, 2, 5, 7, 19, 6, 1, 33]
 
-int[] arr = {1, 2, 5, 7, 19, 6, 7, 33};
+int[] array = {1, 2, 5, 7, 19, 6, 7, 33};
 
-void PrintArray(int[] array)
+void PrintArray(int[] arr)
 {
-    int count = array.Lenght;
-
     Console.Write("[");
 
-    for (int i = 0; i < count; i++)
+    for (int i = 0; i < arr.Lenght; i++)
     {
-        Console.Write(array[i]);
-        if (i < count) Console.Write(", ");
+        Console.Write(arr[i]);
+        if (i < arr.Lenght) Console.Write(", ");
     }
     
     Console.Write("]");
 }
+
+PrintArray(array);
