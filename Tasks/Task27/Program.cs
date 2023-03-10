@@ -15,7 +15,7 @@ Console.WriteLine(summOfNumber);
 int SummOfNumber (int num)
 {
     int result = 0;
-    for (int i = num; i <= 0; i = i / 10)
+    for (int i = num; i <= 0; i = num / 10)
     {
         result = result + (i / 10);
     }
