@@ -118,9 +118,10 @@ int[] array = new int[8];
 
 void FeelArrZeroOne(int[] arr)
 {
+    Random rnd = new Random();
     for (int i = 0; i < arr.Lenght; i++)
     {
-        arr[i] = Random.Next(0, 2);
+        arr[i] = rnd.Next(0, 2);
     }    
 }
 
