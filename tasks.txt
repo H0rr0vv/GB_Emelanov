@@ -38,3 +38,88 @@ PrintArray(arr);
 SelectionSort(arr);
 
 PrintArray(arr);
+
+
+//////////////////////////////////////////////////////////////
+
+
+//Задача 26:
+//Напишите прогшрамму, которая принимает на вход число
+// и выдает количество цифр в числе.
+//456 -> 3
+//78 -> 2
+//89126 -> 5
+
+
+Console.WriteLine("Введите число");
+int number = Convert.ToInt32(Console.ReadLine());
+
+int NumOfValue(int num)
+{
+    int index = 10;
+    int value = 1; 
+    while (num / index != 0)
+    {
+        index = index * 10;
+        value++;
+    }
+    
+    
+    int value = 1;
+    for (int i = 10; num / i != 0; i = i * 10)
+    {
+        value++;
+    }
+
+    return value;   
+}
+
+int numOfValue = NumOfValue(number);
+Console.WriteLine(numOfValue);
+
+
+///////////////////////////////////////////////////////////////
+
+
+//Задача 28:
+//Напишите программу, которая принимает на вход число N
+// и выдает произведение чисел от 1 до N.
+//4 -> 24
+//5 -> 120
+
+
+Console.WriteLine("Введите число");
+int number = Convert.ToInt32(Console.ReadLine());
+
+int ProductToNumber (num)
+{
+    int res = 1;
+    for (int i = 1; i < num; i++)
+    {
+        int res = res * i;
+    }
+    return res;
+}
+
+int productToNumber = ProductToNumber(number);
+Console.WriteLine(productToNumber);
+
+
+////////////////////////////////////////////////////////////////
+
+
+//Задача 30:
+//Напишите программу, которая выводит массив из 8 элементов, 
+//заполненный нулями и единицами в случайном порядке.
+//[1,0,1,1,0,1,0,0]
+
+
+int[] array = new int[8];
+
+void ArrZeroOne(arr[])
+{
+    for (int i = 0; i < arr.Lenght; i++)
+    {
+        
+    }
+}
