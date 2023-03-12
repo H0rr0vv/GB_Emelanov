@@ -14,7 +14,7 @@ int BPointX = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Y: ");
 int BPointY = Convert.ToInt32(Console.ReadLine());
 
-double distance = MathRound(Distanse(APointX, APointY, BPointX, BPointY), 2, MidpointRounding.ToZero);
+double distance = Math.Round(Distanse(APointX, APointY, BPointX, BPointY), 2, MidpointRounding.ToZero);
 Console.WriteLine(distance);
 
 double Distanse (int AX, int AY, int BX, int BY)

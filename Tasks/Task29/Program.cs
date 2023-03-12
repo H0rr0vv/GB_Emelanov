@@ -8,10 +8,12 @@ void PrintArray(int[] arr)
 {
     Console.Write("[");
 
-    for (int i = 0; i < arr.Lenght; i++)
+    int size = arr.Length;
+
+    for (int i = 0; i < size; i++)
     {
         Console.Write(arr[i]);
-        if (i < arr.Lenght) Console.Write(", ");
+        if (i < size - 1) Console.Write(", ");
     }
     
     Console.Write("]");
