@@ -474,6 +474,7 @@ void PrintArray(int[] arr)
 int CompArray(int[] arr)
 {
     int size = arr.Length;
+
     if (arr.Length % 2 == 0)
     {
         int[] temp = new int[size / 2];
@@ -482,6 +483,7 @@ int CompArray(int[] arr)
             temp[i] = arr[i] * arr[arr.Length - 1 - i];
         }
     }
+
     else 
     {
         int[] temp = new int[size / 2 + 1];
@@ -491,6 +493,7 @@ int CompArray(int[] arr)
             if (i = temp.Length) temp[i] = arr[i];
         }
     }
+
     return temp;
 }
 
@@ -500,3 +503,9 @@ int[] newArray = CompArray(array);
 PrintArray(array);
 Console.Write(" -> ");
 PrintArray(newArray);
+
+
+/////////////////////////////////////////////////////////////
+
+
+//Задача 
