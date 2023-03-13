@@ -1,3 +1,69 @@
+//////////////////////////////////////////////////////
+
+//Создание массива
+
+//////////////////////////////////////////////////////
+
+
+
+void CreateArray(int size, int min, int max)
+{
+    int[] arr = new int[size];
+    Random rnd = new Random();
+
+    for (int i = 0; i < size; i++)
+    {
+        arr[i] = rnd.Next(min, max + 1);
+    }
+    return arr;
+}
+
+
+//////////////////////////////////////////////////////////
+
+//Вывод массива
+
+/////////////////////////////////////////////////////////
+
+
+void PrintArray(int[] arr)
+{
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write(arr[i]);
+        if (i < arr.Length - 1) Console.Write(", ");
+    }
+    
+    Console.Write("]");
+}
+
+
+/////////////////////////////////////////////////////////
+
+//
+
+////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////
 
 
 //Задача в лекции
@@ -6,7 +72,7 @@ int[] arr = {1, 5, 4, 3, 2, 6, 7, 1, 1};
 
 void PrintArray(int[] array)
 {
-    int count = array.Lenght;
+    int count = array.Length;
 
     for (int i = 0; i < count; i++)
     {
@@ -17,7 +83,7 @@ void PrintArray(int[] array)
 
 void SelectionSort(int[] array)
 {
-    for (int i = 0; i < array.Lenght - 1; i++)
+    for (int i = 0; i < array.Length - 1; i++)
     {
         int minPosition = i;
 
@@ -57,21 +123,21 @@ int number = Convert.ToInt32(Console.ReadLine());
 int NumOfValue(int num)
 {
     int index = 10;
-    int value = 1; 
+    int summ = 1; 
     while (num / index != 0)
     {
         index = index * 10;
-        value++;
+     summ++;
     }
     
     
-    int value = 1;
+    int summ = 1;
     for (int i = 10; num / i != 0; i = i * 10)
     {
-        value++;
+     summ++;
     }
 
-    return value;   
+    return summ;   
 }
 
 int numOfValue = NumOfValue(number);
@@ -119,7 +185,7 @@ int[] array = new int[8];
 void FeelArrZeroOne(int[] arr)
 {
     Random rnd = new Random();
-    for (int i = 0; i < arr.Lenght; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
         arr[i] = rnd.Next(0, 2);
     }    
@@ -129,13 +195,191 @@ void PrintArray(int[] arr)
 {
     Console.Write("[");
 
-    for (int i = 0; i < arr.Lenght; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
         Console.Write(arr[i]);
-        if (i < arr.Lenght) Console.Write(", ");
+        if (i < arr.Length) Console.Write(", ");
     }
     
     Console.Write("]");
 }
 
 PrintArray(array);
+
+
+/////////////////////////////////////////////////////////////
+
+
+//Задача 31: Задайте массив из 12 элементов,
+//заполненный случайными элементами из промежутка [-9, 9].
+//Найдите сумму отрицательных и положительных элементов массива.
+//[3, 9, -8, 1, 0, -7, 2, -1, 8, -3, -1, 6]
+//сумма положительных чисел равна 29, сумма отрицательных равна -20
+
+
+
+void CreateArray(int size, int min, int max)
+{
+    int[] arr = new int[size];
+    Random rnd = new Random();
+
+    for (int i = 0; i < size; i++)
+    {
+        arr[i] = rnd.Next(min, max + 1);
+    }
+    return arr;
+}
+
+void PrintArray(int[] arr)
+{
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write(arr[i]);
+        if (i < arr.Length - 1) Console.Write(", ");
+    }
+    
+    Console.Write("]");
+}
+
+int SummPositive (int[] arr)
+{
+    int summ = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] > 0) summ += arr[i]
+    }
+    return summ;
+}
+
+int SummNegative (int[] arr)
+{
+    int summ = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] < 0) summ += arr[i]
+    }
+    return summ;
+}
+
+
+int[] array = CreateArray(12, -9, 9);
+PrintArray(array);
+
+int summPositive = SummPositive(array);
+int summNegative = SummNegative(array);
+
+Console.WriteLine($"Сумма положительных чисел равна {summPositive}, ");
+Console.WriteLine($"Сумма отрицательных чисел равна {summNegative} ");
+
+
+///////////////////////////////////////////////////////////
+
+
+//Задача 32:
+//Напишите программу замена элементов массива:
+//положительные элементы замените на
+//соответствующие отрицательные, и наоборот.
+//[-4, -8, 8, 2] -> [4, 8, -8, -2]
+
+void CreateArray(int size, int min, int max)
+{
+    int[] arr = new int[size];
+    Random rnd = new Random();
+
+    for (int i = 0; i < size; i++)
+    {
+        arr[i] = rnd.Next(min, max + 1);
+    }
+    return arr;
+}
+
+void PrintArray(int[] arr)
+{
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write(arr[i]);
+        if (i < arr.Length - 1) Console.Write(", ");
+    }
+    
+    Console.Write("]");
+}
+
+void PrintReverseArray(int[] arr)
+{
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write(-arr[i]);
+        if (i < arr.Length - 1) Console.Write(", ");
+    }
+    
+    Console.Write("]");
+}
+
+int[] array = CreateArray(4, -9, 9);
+PrintArray(array);
+Console.Write(" -> ");
+PrintReverseArray(array);
+
+
+///////////////////////////////////////////////////////////////
+
+
+//Задача 33:
+//Задайте массив.
+//Напишите программу, которая определяет, присутствует ли 
+//заданное число в массиве.
+4; массив [6, 7, 19, 345, 3] -> нет
+
+
+void CreateArray(int size, int min, int max)
+{
+    int[] arr = new int[size];
+    Random rnd = new Random();
+
+    for (int i = 0; i < size; i++)
+    {
+        arr[i] = rnd.Next(min, max + 1);
+    }
+    return arr;
+}
+
+void PrintArray(int[] arr)
+{
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write(arr[i]);
+        if (i < arr.Length - 1) Console.Write(", ");
+    }
+    
+    Console.Write("]");
+}
+
+bool FindElem (int elem; int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        return elem == arr[i]
+    }
+}
+
+bool FindElem (int elem; int[] arr)
+{
+    int check;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (elem == arr[i]) check++;
+    }
+    return check != 0;
+}
+
+int[] array = CreateArray(5, 0, 345);
+Console.WriteLine("Введите искомый элемент");
+int element = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"{element}; массив ");
+PrintArray(array);
+Console.Write(" -> ");
+Console.Write(FindElem(element, array) ? "да" : "нет");
