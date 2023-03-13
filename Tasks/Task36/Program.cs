@@ -4,7 +4,7 @@
 //[-4, -6, 89, 6] -> 0
 
 
-void CreateArray(int size, int min, int max)
+int CreateArray(int size, int min, int max)
 {
     int[] arr = new int[size];
     Random rnd = new Random();
