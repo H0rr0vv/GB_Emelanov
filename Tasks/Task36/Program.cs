@@ -4,7 +4,7 @@
 //[-4, -6, 89, 6] -> 0
 
 
-int CreateArray(int size, int min, int max)
+int[] CreateArray(int size, int min, int max)
 {
     int[] arr = new int[size];
     Random rnd = new Random();
@@ -31,13 +31,14 @@ void PrintArray(int[] arr)
 int FindSummNotEvenPositionElem (int[] arr)
 {
     int res = 0;
-    for (i = 1; i < arr.Length; i = i + 2)
+    for (int i = 1; i < arr.Length; i = i + 2)
     {
         res += arr[i];
     }
+	return res;
 }
 
-int[] array = CreateArray(10, 0, 10);
+int[] array = CreateArray(5, -10, 10);
 PrintArray(array);
 
 int summNotEvenPositionElem = FindSummNotEvenPositionElem(array);
