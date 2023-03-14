@@ -432,16 +432,7 @@ PrintArray(newArray);
 //[3.5, 7.1, 22.9, 2.3, 78.5] -> 76.2
 
 
-double[] array = CreateArrayRndDouble(4, 0, 10);
-double maxValue = FindMax(array);
-double minValue = FindMin(array);
-double diffMaxToMin = DiffMaxToMin(maxValue, minValue);
-
-PrintArray(array);
-Console.Write(" -> ");
-Console.Write(diffMaxToMin);
-
-double CreateArrayRndDouble(int size, int min, int max)
+double[] CreateArrayRndDouble(int size, int min, int max)
 {
     double[] arr = new double[size];
     Random rnd = new Random();
@@ -469,7 +460,7 @@ void PrintArrayDouble(double[] arr)
 double FindMax(double[] arr)
 {
     double max = arr[0];
-    for (i = 0; i < arr.Length; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
         if (arr[i] > max) max = arr[i];
     }
@@ -479,7 +470,7 @@ double FindMax(double[] arr)
 double FindMin(double[] arr)
 {
     double min = arr[0];
-    for (i = 0; i < arr.Length; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
         if (arr[i] < min) min = arr[i];
     }
@@ -491,3 +482,13 @@ double DiffMaxToMin(double max, double min)
     double res = Math.Round(max - min, 1);
     return res;
 }
+
+
+double[] array = CreateArrayRndDouble(4, 0, 10);
+double maxValue = FindMax(array);
+double minValue = FindMin(array);
+double diffMaxToMin = DiffMaxToMin(maxValue, minValue);
+
+PrintArrayDouble(array);
+Console.Write(" -> ");
+Console.Write(diffMaxToMin);
