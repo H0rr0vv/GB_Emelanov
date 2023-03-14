@@ -66,48 +66,6 @@ void PrintArray(int[] arr)
 ///////////////////////////////////////////////////////////////
 
 
-//Задача в лекции
-
-int[] arr = {1, 5, 4, 3, 2, 6, 7, 1, 1};
-
-void PrintArray(int[] array)
-{
-    int count = array.Length;
-
-    for (int i = 0; i < count; i++)
-    {
-        Console.WriteLine($"{array[i]} ");
-    }
-    Console.WriteLine();
-}
-
-void SelectionSort(int[] array)
-{
-    for (int i = 0; i < array.Length - 1; i++)
-    {
-        int minPosition = i;
-
-        for (int j = i + 1; j = array.Leght; j++)
-        {
-            if (array[j] < array[minPosition]) minPosition = j
-        }
-
-        int temporary = array[i];
-        array[i] = array[minPosition];
-        array[minPosition] = temporary;
-    }
-}
-
-
-
-PrintArray(arr);
-SelectionSort(arr);
-
-PrintArray(arr);
-
-
-//////////////////////////////////////////////////////////////
-
 
 //Задача 26:
 //Напишите прогшрамму, которая принимает на вход число
@@ -131,7 +89,7 @@ int NumOfValue(int num)
     }
     
     
-    int summ = 1;
+    summ = 1;
     for (int i = 10; num / i != 0; i = i * 10)
     {
      summ++;
@@ -157,18 +115,19 @@ Console.WriteLine(numOfValue);
 Console.WriteLine("Введите число");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int ProductToNumber (num)
+int ProductToNumber (int num)
 {
     int res = 1;
-    for (int i = 1; i < num; i++)
+    for (int i = 1; i <= num; i++)
     {
-        int res = res * i;
+        res = res * i;
     }
     return res;
 }
 
 int productToNumber = ProductToNumber(number);
 Console.WriteLine(productToNumber);
+
 
 
 /////////////////////////////////////////////////////////////
@@ -182,7 +141,7 @@ Console.WriteLine(productToNumber);
 
 
 
-int CreateArray(int size, int min, int max)
+int[] CreateArray(int size, int min, int max)
 {
     int[] arr = new int[size];
     Random rnd = new Random();
@@ -211,7 +170,7 @@ int SummPositive (int[] arr)
     int summ = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i] > 0) summ += arr[i]
+        if (arr[i] > 0) summ += arr[i];
     }
     return summ;
 }
@@ -221,7 +180,7 @@ int SummNegative (int[] arr)
     int summ = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i] < 0) summ += arr[i]
+        if (arr[i] < 0) summ += arr[i];
     }
     return summ;
 }
@@ -246,7 +205,7 @@ Console.WriteLine($"Сумма отрицательных чисел равна 
 //соответствующие отрицательные, и наоборот.
 //[-4, -8, 8, 2] -> [4, 8, -8, -2]
 
-int CreateArray(int size, int min, int max)
+int[] CreateArray(int size, int min, int max)
 {
     int[] arr = new int[size];
     Random rnd = new Random();
@@ -270,19 +229,21 @@ void PrintArray(int[] arr)
     Console.Write("]");
 }
 
-void ReverseArray(int[] arr)
+int[] ReverseArray(int[] arr)
 {
-    
+    int[] reverseArr = new int[arr.Length];
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = arr[i] * -1;
+        reverseArr[i] = arr[i] * -1;
     }
+	return reverseArr;
 }
 
 int[] array = CreateArray(4, -9, 9);
+int[] reverseArray = ReverseArray(array);
 PrintArray(array);
 Console.Write(" -> ");
-PrintArray(array);
+PrintArray(reverseArray);
 
 
 ///////////////////////////////////////////////////////////////

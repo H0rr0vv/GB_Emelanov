@@ -3,13 +3,7 @@
 //[345, 897, 568, 234] -> 2
 
 
-Console.WriteLine("Введите размер массива");
-int size = Convert.ToInt32(Console.ReadLine());
-int[] array = new int[size];
-int value = 0;
-
-
-int CreateArray(int size, int min, int max)
+int[] CreateArray(int size, int min, int max)
 {
     int[] arr = new int[size];
     Random rnd = new Random();
@@ -44,7 +38,7 @@ int FindEvenElem (int[] arr)
     return value;
 }
 
-int[] array = CreateArray(5, 100, 999);
+int[] array = CreateArray(4, 100, 999);
 int valueEvenElem = FindEvenElem(array);
 
 PrintArray(array);
