@@ -365,7 +365,7 @@ Console.Write(valueTwoDigitElem);
 //[6 7 3 6] -> 36 21
 
 
-int CreateArray(int size, int min, int max)
+int[] CreateArray(int size, int min, int max)
 {
     int[] arr = new int[size];
     Random rnd = new Random();
@@ -389,13 +389,13 @@ void PrintArray(int[] arr)
     Console.Write("]");
 }
 
-int CompArray(int[] arr)
+int[] CompArray(int[] arr)
 {
     int size = arr.Length;
-
+	int[] temp = new int[size / 2];
+	
     if (arr.Length % 2 == 0)
     {
-        int[] temp = new int[size / 2];
         for (int i = 0; i < temp.Length; i++)
         {
             temp[i] = arr[i] * arr[arr.Length - 1 - i];
@@ -404,11 +404,11 @@ int CompArray(int[] arr)
 
     else 
     {
-        int[] temp = new int[size / 2 + 1];
-        for (int i = 0; i < temp.Length - 1; i++)
+        temp = new int[size / 2 + 1];
+        for (int i = 0; i <= temp.Length - 1; i++)
         {
             temp[i] = arr[i] * arr[arr.Length - 1 - i];
-            if (i = temp.Length) temp[i] = arr[i];
+            if (i == temp.Length -1) temp[i] = arr[i];
         }
     }
 
