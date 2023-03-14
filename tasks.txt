@@ -305,12 +305,12 @@ Console.Write(FindElem(element, array) ? "да" : "нет");
 //Задача 35:
 //Задайте одномерный массив из 123 случайных чисел.
 //Найдите количество элементов массива, значения которых лежат в
-отрезке [10, 99].
+//отрезке [10, 99].
 //[5, 18, 123, 6, 2] -> 1
 //[1, 2, 3, 6, 2] -> 0
 //[10, 11, 12, 13, 14] -> 5
 
-int CreateArray(int size, int min, int max)
+int[] CreateArray(int size, int min, int max)
 {
     int[] arr = new int[size];
     Random rnd = new Random();
