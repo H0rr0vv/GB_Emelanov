@@ -5,9 +5,6 @@
 //3 -> 11
 //2 -> 10
 
-Console.WriteLine ("Введите число в десятичной системе");
-int digit = Convert.ToInt32(Console.ReadLine());
-
 int ConvertToBinary (int dig)
 {
     int binaryDig = 0;
@@ -20,6 +17,9 @@ int ConvertToBinary (int dig)
     }
     return binaryDig / 10;
 }
+
+Console.WriteLine ("Введите число в десятичной системе");
+int digit = Convert.ToInt32(Console.ReadLine());
 
 int binaryDigit = ConvertToBinary(digit);
 Console.WriteLine(binaryDigit);
