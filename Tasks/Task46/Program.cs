@@ -27,7 +27,7 @@ void PrintMatrix (int[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write("${matrix[i, j], 4}");
+            Console.Write($"{matrix[i, j], 4}");
         }
         Console.WriteLine("");
     }
