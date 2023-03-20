@@ -38,10 +38,9 @@ void PrintMatrix (int[,] matrix)
 
 bool FindPositionMatrix(int[,] matrix, int indRow, int indColumn)
 {
-    return indRow <= matrix.GetLength(0)
-        && indColumn <= matrix.GetLength(1)
-		&& indRow >= matrix.GetLength(0)
-		&& indColumn >= matrix.GetLength(1);
+    return indRow + 1 <= matrix.GetLength(0)
+        && indColumn + 1 <= matrix.GetLength(1);
+
 }
 
 int row = Convert.ToInt32(Console.ReadLine());
@@ -49,6 +48,6 @@ int column = Convert.ToInt32(Console.ReadLine());
 int[,] array2d = CreateMatrixRndInt(3, 4, 0, 10);
 
 PrintMatrix(array2d);
-Console.WriteLine (FindPositionMatrix(array2d, row, column)     
-? $"{row}, {column} -> {array2d[row - 1, column - 1]}"
+Console.WriteLine (FindPositionMatrix(array2d, row, column)
+? $"{row}, {column} -> {array2d[row, column]}"
 : $"{row}, {column} -> такого элемента в массиве нет");
