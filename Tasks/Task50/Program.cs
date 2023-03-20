@@ -30,30 +30,25 @@ void PrintMatrix (int[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write("${matrix[i, j], 4}");
+            Console.Write($"{matrix[i, j], 4}");
         }
         Console.WriteLine("");
     }
 }
 
-void FindPositionMatrix(int[,] matrix, int indRow, int indColumn)
+bool FindPositionMatrix(int[,] matrix, int indRow, int indColumn)
 {
-    if (indRow >= matrix.GetLength(0) 
-        && indColumn >= matrix.GetLength(1))
-    {
-        Console.WriteLine(
-            $"{indRow}, {indColumn} -> {matrix[indRow, indColumn]}");
-    }
-    else
-    {
-        Console.WriteLine(
-            $"{indRow}, {indColumn} -> такого элемента в массиве нет");
-    }
+    return indRow <= matrix.GetLength(0)
+        && indColumn <= matrix.GetLength(1)
+		&& indRow >= matrix.GetLength(0)
+		&& indColumn >= matrix.GetLength(1);
 }
 
 int row = Convert.ToInt32(Console.ReadLine());
 int column = Convert.ToInt32(Console.ReadLine());
 int[,] array2d = CreateMatrixRndInt(3, 4, 0, 10);
-PrintMatrix(array2d);
-int findPositionMatrix = FindPositionMatrix(array2d, row, column);
 
+PrintMatrix(array2d);
+Console.WriteLine (FindPositionMatrix(array2d, row, column)     
+? $"{row}, {column} -> {array2d[row - 1, column - 1]}"
+: $"{row}, {column} -> такого элемента в массиве нет");
