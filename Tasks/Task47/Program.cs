@@ -14,7 +14,8 @@ double[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = rnd.Next(min, max + 1);
+            double num = rnd.NextDouble() * ((max - min) + min);
+            matrix[i, j] = Math.Round(num, 1);
         }
     }
     return matrix; 
@@ -26,7 +27,7 @@ void PrintMatrix (double[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write($"{matrix[i, j], 4}");
+            Console.Write($"{matrix[i, j], 6}");
         }
         Console.WriteLine("");
     }
