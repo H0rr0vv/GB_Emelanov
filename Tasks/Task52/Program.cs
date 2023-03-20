@@ -37,14 +37,14 @@ void PrintMatrix (int[,] matrix)
 
 double[] FindAverageColumn(int[,] matrix)
 {
-    double[] averageColumn = new int[matrix.GetLength(1)];
+    double[] averageColumn = new double[matrix.GetLength(1)];
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
             averageColumn[j] = averageColumn[j] + matrix[i, j];
         }
-        averageColumn[j] = averageColumn[j] / matrix.GetLength(0) + 1;
+        averageColumn[j] = averageColumn[j] / matrix.GetLength(0);
     }
     return averageColumn;
 }
@@ -54,8 +54,8 @@ void PrintFindAverageColumn(double[] aveCol)
     Console.Write("Среднее арифметическое каждого столбца: ");
     for (int i = 0; i < aveCol.Length; i++)
     {
-        Console.Write($"{aveCol[i]}");
-        if(i < aveCol.Length + 1) Console.Write("; ");
+        Console.Write($"{Math.Round(aveCol[i], 1)}");
+        if(i + 1 < aveCol.Length) Console.Write("; ");
     }
 }
 
@@ -66,4 +66,4 @@ void PrintFindAverageColumn(double[] aveCol)
 int[,] array2d = CreateMatrixRndInt(3, 4, 0, 10);
 PrintMatrix(array2d);
 double[] averageColumn = FindAverageColumn(array2d);
-PrintFindSumDiagonalDigit(averageColumn);
+PrintFindAverageColumn(averageColumn);
