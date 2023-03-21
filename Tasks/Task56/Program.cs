@@ -45,6 +45,7 @@ int FindMinSumRow (int[,] matrix)
 {
     int temp = 0;
     int res = 0;
+    int indRow = 0;
     
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
@@ -52,15 +53,22 @@ int FindMinSumRow (int[,] matrix)
         {
             temp = temp + matrix[i, j];
         }
-        if ()
+        
+        if (res == 0) res = temp;
+        
+        if (res > temp)
+        {
+            res = temp;
+            indRow = i;
+        }
     }
+    return indRow;
 }
-
-
-
-
 
 
 
 int[,] array2d = CreateMatrixRndInt(3, 4, 0, 10);
 PrintMatrix(array2d);
+int indMinSumRow = FindMinSumRow(array2d);
+Console.WriteLine("");
+Console.WriteLine($"Минимальная сумма элементов в {indMinSumRow} строке");
