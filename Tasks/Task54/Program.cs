@@ -39,23 +39,23 @@ void PrintMatrix (int[,] matrix)
     }
 }
 
-int[,] SortRow (int[,] arr)
+int[,] SortRow (int[,] matrix)
 {
     int temp = 0;
-    for (int i = 0; i < arr.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 1; j < arr.GetLength(1); j++)
+        for (int j = 1; j < matrix.GetLength(1); j++)
         {
-            if (arr[i, j - 1] < arr[i, j])
+            if (matrix[i, j - 1] < matrix[i, j])
             {
-                temp = arr[i, j - 1];
-                arr[i, j - 1] = arr[i, j];
-                arr[i, j] = temp;
+                temp = matrix[i, j - 1];
+                matrix[i, j - 1] = matrix[i, j];
+                matrix[i, j] = temp;
                 j = 0;
             }
         }
     }
-	return arr;
+	return matrix;
 }
 
 int[,] array2d = CreateMatrixRndInt(3, 4, 0, 10);

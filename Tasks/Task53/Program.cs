@@ -1,6 +1,12 @@
-﻿/*Задача 53: 
+﻿/*
+Задача 53: 
 Задайте двумерный массив. Напишите программу, которая поменяет
-местами первую и последнюю строку массива.*/
+местами первую и последнюю строку массива.
+
+НЕ ДОДЕЛАН
+
+
+*/
 
 int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 {
@@ -29,16 +35,16 @@ void PrintMatrix (int[,] matrix)
     }
 }
 
-int[,] ChangeFirstEndRow (int[,] arr)
+int[,] ChangeFirstEndRow (int[,] matrix)
 {
-    int[] tempArr = new int[arr.GetLength(0)];
-    for (int j = 0; j < arr.GetLength(1); j++)
+    int[] tempArr = new int[matrix.GetLength(0)];
+    for (int j = 0; j < matrix.GetLength(1); j++)
     {
-        tempArr[j] = arr[0, j];
-        arr[0, j] = arr[arr.GetLength(0) - 1, j];
-        arr[arr.GetLength(0) - 1, j] = tempArr[j];
+        tempArr[j] = matrix[0, j];
+        matrix[0, j] = matrix[matrix.GetLength(0) - 1, j];
+        matrix[matrix.GetLength(0) - 1, j] = tempArr[j];
     }
-	return arr;
+	return matrix;
 }
 
 int[,] array2d = CreateMatrixRndInt(3, 4, 0, 10);
