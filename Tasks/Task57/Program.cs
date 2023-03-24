@@ -39,4 +39,14 @@ void PrintMatrix (int[,] matrix)
     }
 }
 
+int[,] CreateFrequencyDictionary(int[,] matrix)
+{
+    //найти наибольший элемент массива
+    int[,] dictionary = new int[size,2]//
+    for (int i = 0; i < matrix.GetLength(0); i++)//перебрать все элементы и на попадание с нужным повышать цифру второго столбца
+    {
+        
+    }
+}
 
+//метод для красивого вывода // не забыть сделать чтобы пустые элементы пропукались
