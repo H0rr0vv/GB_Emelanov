@@ -19,6 +19,22 @@ int[,,] CreateMatrixRndInt(int rows, int columns, int depth, int min, int max)
             for (int k = 0; k < matrix.GetLength(2); k++)
             {
                 matrix[i, j, k] = rnd.Next(min, max + 1);
+                for (int l = 0; l < matrix.GetLength(0); l++)
+                {
+                    for (int m = 0; m < matrix.GetLength(1); m++)
+                    {
+                        for (int n = 0; n < matrix.GetLength(2); n++)
+                        {
+                            if(matrix[i, j, k] == matrix[l, m, n])
+                            {
+                                matrix[i, j, k] = rnd.Next(min, max + 1);
+                                l = 0;
+                                m = 0;
+                                n = 0;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -33,15 +49,12 @@ void PrintMatrix(int[,,] matrix)
         {
             for (int k = 0; k < matrix.GetLength(2); k++)
             {
-                Console.Write()
+                Console.Write($"{matrix[i, j, k]}({i},{j},{k}) ");
             }
         }
+        Console.WriteLine("");
     }
 }
 
 int[,,] matrix = CreateMatrixRndInt(3, 4, 5, 0, 100);
 PrintMatrix(matrix);
-Console.WriteLine("");
-PrintMatrix(secondMatrix);
-Console.WriteLine("____________");
-PrintMatrix(resultMatrix);
