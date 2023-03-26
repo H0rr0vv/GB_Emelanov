@@ -44,7 +44,7 @@ void PrintMatrix (int[,] matrix)
 int FindMinSumRow (int[,] matrix)
 {
     int temp = 0;
-    int res = 0;
+    int res = matrix[0, 0];
     int indRow = 0;
     
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -54,20 +54,19 @@ int FindMinSumRow (int[,] matrix)
             temp = temp + matrix[i, j];
         }
         
-        if (res == 0) res = temp;
-        
-        if (res > temp)
+        if (res >= temp)
         {
             res = temp;
             indRow = i;
         }
+        temp = 0;
     }
     return indRow;
 }
 
 
 
-int[,] array2d = CreateMatrixRndInt(3, 4, 0, 10);
+int[,] array2d = CreateMatrixRndInt(5, 1, 0, 10);
 PrintMatrix(array2d);
 int indMinSumRow = FindMinSumRow(array2d);
 Console.WriteLine("");
