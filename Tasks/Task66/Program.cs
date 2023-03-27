@@ -9,19 +9,21 @@ M = 4; N = 8. -> 30
 */
 
 
-Console.WriteLine("Введите певрое натуральное число");
-int numberM = 2;
+Console.WriteLine("Введите МЕНЬШЕЕ натуральное число");
+int numberM = 4;
 	//Convert.ToInt32(Console.WriteLine());
-Console.WriteLine("Введите второе натуральное число");
-int numberN = 5;
+Console.WriteLine("Введите БОЛЬШЕЕ натуральное число");
+int numberN = 8;
 	//Convert.ToInt32(Console.WriteLine());
 
-SumMToN(numberM, numberN);
 
 
-int SumMToN (int numM, int numN)
+Console.WriteLine($"M = {numberM}; N = {numberN} -> {SumOfNumbers(numberM, numberN)}");
+
+
+
+int SumOfNumbers (int numM, int numN)
 {
-    if (numM > numN) return;
-    SumMToN (numM, numN - 1);
-    Console.Write($"{numN} ");
+    if(numM == numN + 1) return 0;
+    return numN + SumOfNumbers(numM, numN - 1);
 }

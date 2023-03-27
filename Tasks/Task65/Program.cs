@@ -6,18 +6,27 @@
 */
 
 Console.WriteLine("Введите певрое натуральное число");
-int numberM = 2;
-	//Convert.ToInt32(Console.WriteLine());
+int numberM = Convert.ToInt32(Console.WriteLine());
 Console.WriteLine("Введите второе натуральное число");
-int numberN = 5;
-	//Convert.ToInt32(Console.WriteLine());
+int numberN = Convert.ToInt32(Console.WriteLine());
 
 NaturelNumbers(numberM, numberN);
 
 
 void NaturelNumbers (int numM, int numN)
 {
-    if (numM > numN) return;
-    NaturelNumbers (numM, numN - 1);
-    Console.Write($"{numN} ");
+    if(numM < numN)
+    {
+        NaturelNumbers (numM, numN - 1);
+        Console.Write($"{numN} ");
+    }
+    else if (numM > numN)
+    {
+        Console.Write($"{numM} ");
+        NaturelNumbers (numM - 1, numN);
+    }
+    else
+    {
+        Console.Write($"{numM} ");
+    }
 }
