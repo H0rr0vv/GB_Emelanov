@@ -10,11 +10,9 @@ M = 4; N = 8. -> 30
 
 
 Console.WriteLine("Введите МЕНЬШЕЕ натуральное число");
-int numberM = 4;
-	//Convert.ToInt32(Console.WriteLine());
+int numberM = Convert.ToInt32(Console.WriteLine());
 Console.WriteLine("Введите БОЛЬШЕЕ натуральное число");
-int numberN = 8;
-	//Convert.ToInt32(Console.WriteLine());
+int numberN = Convert.ToInt32(Console.WriteLine());
 
 
 
