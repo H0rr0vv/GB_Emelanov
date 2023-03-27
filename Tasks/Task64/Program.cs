@@ -9,7 +9,7 @@ N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 */
 
 Console.WriteLine("Введите натуральное число");
-int number = Convert.ToInt32(Console.WriteLine());
+int number = Convert.ToInt32(Console.ReadLine());
 NaturelNumbers(number);
 
 
@@ -19,4 +19,3 @@ void NaturelNumbers (int num)
     Console.Write($"{num} ");
     NaturelNumbers (num - 1);
 }
-    
