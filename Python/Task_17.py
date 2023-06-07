@@ -4,9 +4,9 @@
 Input: [1, 1, 2, 0, -1, 3, 4, 4]
 Output: 6
 '''
-
+'''
 import random
-original_list = [random.randint(-10, 10) for i in range(8) ]
+original_list = [random.randint(-10, 10) for i in range(8)]
 
 print('Дан список:', end = ' ')
 for i in original_list:
@@ -19,3 +19,12 @@ for i in original_list:
 
 print()
 print (f'Количество уникальных элементов списка = {len(unique_set)}')
+'''
+
+
+import random
+my_list = [random.randint(-10, 10) for i in range(8)]
+print(f'Дан список: {my_list}')
+
+my_list = set(my_list)
+print(f'Количество уникальных элементов списка = {len(my_list)}')

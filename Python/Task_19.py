@@ -11,12 +11,13 @@ import random
 original_list = [random.randint(0, 10) for i in range(5)]
 list_shift = int(input('Введите на сколько сдвинется список '))
 
+
 print(f'Дан список: {original_list}', end = ' ')
 
 
 print(f'k = {list_shift}')
 
-
+'''
 new_list = []
 count = -1 * list_shift
 
@@ -24,6 +25,13 @@ while count + 1 < list_shift:
     n = original_list[count]
     new_list.append(n)
     count += 1
+'''
+
+
+
+for i in range(list_shift):
+    original_list.insert(0, original_list.pop())
+
 
 print()
-print(new_list)
+print(original_list)
