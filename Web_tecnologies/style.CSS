@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'ISOCPEUR';
+    src: url('fonts/isocpeur.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('fonts/isocpeur.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('fonts/isocpeur.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('fonts/isocpeur.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('fonts/isocpeur.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('fonts/isocpeur.svg#isocpeur') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+body {
+    background-color: rgba(255, 217, 0, 0.664);
+    font-family: 'ISOCPEUR', sans-serif;
+}
+
+ol {
+    color: rgb(242, 255, 255)
+}
+
+a {
+    color: red;
+}
+
+a:hover {
+    color: cyan;
+}
+
+img {
+    width: 500px;
+    position: relative;
+    left: 20px;
+    border: 10px bisque solid;
+
+}
+
+.notitle {
+    color: aqua;
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style-type: square;
+}
+
+.samedog {
+    color: red;
+}
