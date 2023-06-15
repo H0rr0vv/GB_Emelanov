@@ -1,3 +1,4 @@
 from .controller import start
 
-start()
+
+__all__ = ['start']

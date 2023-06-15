@@ -1,4 +1,4 @@
-from .text import main_menu, menu_choice, input_error
+from .text import *
 
 def menu() -> int:
     print(main_menu)

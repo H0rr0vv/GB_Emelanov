@@ -1,4 +1,4 @@
-from view import menu
+from .view import *
 
 def start():
     while True:

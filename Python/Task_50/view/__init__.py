@@ -1,4 +1,5 @@
-from .text import main_menu, menu_choice, input_error
+from .text import *
 from .console import menu
 
-__all__ = ['main_menu', 'menu']
+
+__all__ = ['menu', '*']
