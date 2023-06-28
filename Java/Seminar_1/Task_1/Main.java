@@ -12,6 +12,15 @@ public class Main {
         LocalTime time = LicalTime.now();
         System.out.println("Как вас зовут?");
         String name = scanner.nextLine();
-        if (time == )
+        int hour = time.getHour();
+        if (time >= 5 && hour < 12) {
+            System.out.println('Доброе утро, ' + name + '!');
+        } else if (time >= 12 && hour < 18) {
+            System.out.println('Добрый день, ' + name + '!');
+        } else if (time >= 18 && hour < 23) {
+            System.out.println('Добрый вечер, ' + name + '!');
+        } else {
+            System.out.println('Доброй ночи, ' + name + '!');
+        }
     }
 }
