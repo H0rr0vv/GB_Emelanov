@@ -17,7 +17,7 @@
 6 12 18 24 30 36
 '''
 
-def print_operation_table(row = 6, column = 6):
+def print_operation_table(row, column):
     for j in range(row + 1):
         if j == 0:
             continue
