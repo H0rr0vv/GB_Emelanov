@@ -1,4 +1,4 @@
-package Java.Home_work_1.Task_4;
+package Java.Homework_1.Task_4;
 
 public class Main {
     /* (дополнительное задание) Задано уравнение вида q + w = e, q, w, e >= 0. Некоторые цифры могут быть заменены знаком вопроса, 
