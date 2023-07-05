@@ -13,6 +13,7 @@ public class Main {
         value_1 = in.nextInt();
         System.out.println("Введите действие: ");
         String sight = in.next();
+        System.out.println(sight);                       // знак выводит правильно
         System.out.println("Введите второе число: ");
         value_2 = in.nextInt();
         if (sight == "+") {
