@@ -39,20 +39,19 @@ class dList {
             Node prev = node.prev;
             node.next = prev;
             node.prev = next;
-            if(prev == null) {
+            if (prev == null) {
                 tail = node;
             }
             if (next == null) {
                 head = node;
             }
             node = next;
-            
+
         }
     }
 }
 
-
-public class HM_2 {
+public class HM_3 {
     public static void main(String[] args) {
         dList list = new dList();
         for (int i = 1; i <= 10; i++) {
@@ -64,6 +63,6 @@ public class HM_2 {
         list.reverse();
 
         list.print();
-    }
 
+    }
 }
